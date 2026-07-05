@@ -207,7 +207,7 @@ def add_age_bins(
         df["age_group"] = pd.cut(
             df[age_col],
             bins=[0, 29, 39, 49, 59, 120],
-            labels=["<30", "30-39", "40-49", "50-59", "60+"],
+            labels=[1, 2, 3, 4, 5],
             include_lowest=True,
         )
 

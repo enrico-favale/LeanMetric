@@ -13,4 +13,3 @@ dependencies:
   - jupyterlab
   - seaborn
   - numpy
-prefix: /home/enrico/miniconda3/envs/leanmetric

@@ -1,0 +1,3 @@
+model,best_cv_mae,test_mae,test_rmse,test_r2,best_params
+xgboost,3.795396198528569,3.10365545983408,3.637837499342207,0.7155113769922801,"{""model__subsample"": 0.8, ""model__reg_lambda"": 2.0, ""model__reg_alpha"": 0.1, ""model__n_estimators"": 200, ""model__min_child_weight"": 5, ""model__max_depth"": 3, ""model__learning_rate"": 0.03, ""model__colsample_bytree"": 0.7}"
+random_forest,3.9049907265794856,2.9859731256614994,3.7241007470282024,0.7018593767531673,"{""model__n_estimators"": 500, ""model__min_samples_split"": 10, ""model__min_samples_leaf"": 6, ""model__max_features"": 0.7, ""model__max_depth"": 4}"

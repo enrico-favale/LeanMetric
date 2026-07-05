@@ -1,0 +1,48 @@
+{
+    "target_column": "bodyfat",
+    "numeric_features": [
+        "age",
+        "weight",
+        "height",
+        "neck",
+        "chest",
+        "abdomen",
+        "hip",
+        "thigh",
+        "knee",
+        "ankle",
+        "biceps",
+        "forearm",
+        "wrist",
+        "sex_numeric",
+        "bmi",
+        "neck_to_height_ratio",
+        "chest_to_height_ratio",
+        "abdomen_to_height_ratio",
+        "hip_to_height_ratio",
+        "thigh_to_height_ratio",
+        "knee_to_height_ratio",
+        "ankle_to_height_ratio",
+        "biceps_to_height_ratio",
+        "forearm_to_height_ratio",
+        "wrist_to_height_ratio",
+        "abdomen_to_chest_ratio",
+        "thigh_to_hip_ratio",
+        "biceps_to_wrist_ratio",
+        "navy_bodyfat"
+    ],
+    "categorical_features": [],
+    "best_model_name": "mlp_sklearn",
+    "cv_metrics": {
+        "mae": 3.973646003305559,
+        "rmse": 4.817905449021905,
+        "r2": 0.6915449447221745,
+        "medae": 3.6998516708160114
+    },
+    "test_metrics": {
+        "mae": 3.897111949846529,
+        "rmse": 4.8456775963771515,
+        "r2": 0.49523719746722095,
+        "medae": 3.4419031654361163
+    }
+}

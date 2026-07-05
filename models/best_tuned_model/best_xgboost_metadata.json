@@ -1,0 +1,27 @@
+{
+    "model_name": "xgboost",
+    "target_column": "bodyfat",
+    "dropped_columns": [
+        "deuremberg_bodyfat",
+        "deuremberg_mod_bodyfat",
+        "gallagher_bodyfat",
+        "jackson_pollock_bodyfat",
+        "age_group"
+    ],
+    "best_cv_mae": 3.795396198528569,
+    "best_params": {
+        "model__subsample": 0.8,
+        "model__reg_lambda": 2.0,
+        "model__reg_alpha": 0.1,
+        "model__n_estimators": 200,
+        "model__min_child_weight": 5,
+        "model__max_depth": 3,
+        "model__learning_rate": 0.03,
+        "model__colsample_bytree": 0.7
+    },
+    "test_metrics": {
+        "mae": 3.10365545983408,
+        "rmse": 3.637837499342207,
+        "r2": 0.7155113769922801
+    }
+}

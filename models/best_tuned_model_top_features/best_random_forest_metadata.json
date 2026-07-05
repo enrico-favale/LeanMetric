@@ -1,0 +1,24 @@
+{
+    "model_name": "random_forest",
+    "target_column": "bodyfat",
+    "dropped_columns": [
+        "deuremberg_bodyfat",
+        "deuremberg_mod_bodyfat",
+        "gallagher_bodyfat",
+        "jackson_pollock_bodyfat",
+        "age_group"
+    ],
+    "best_cv_mae": 3.9049907265794843,
+    "best_params": {
+        "model__n_estimators": 500,
+        "model__min_samples_split": 10,
+        "model__min_samples_leaf": 6,
+        "model__max_features": 0.7,
+        "model__max_depth": 4
+    },
+    "test_metrics": {
+        "mae": 2.9859731256614985,
+        "rmse": 3.7241007470282024,
+        "r2": 0.7018593767531673
+    }
+}

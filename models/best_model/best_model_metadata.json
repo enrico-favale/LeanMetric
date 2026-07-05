@@ -1,0 +1,53 @@
+{
+    "target_column": "bodyfat",
+    "numeric_features": [
+        "age",
+        "weight",
+        "height",
+        "neck",
+        "chest",
+        "abdomen",
+        "hip",
+        "thigh",
+        "knee",
+        "ankle",
+        "biceps",
+        "forearm",
+        "wrist",
+        "sex_numeric",
+        "bmi",
+        "neck_to_height_ratio",
+        "chest_to_height_ratio",
+        "abdomen_to_height_ratio",
+        "hip_to_height_ratio",
+        "thigh_to_height_ratio",
+        "knee_to_height_ratio",
+        "ankle_to_height_ratio",
+        "biceps_to_height_ratio",
+        "forearm_to_height_ratio",
+        "wrist_to_height_ratio",
+        "abdomen_to_chest_ratio",
+        "thigh_to_hip_ratio",
+        "biceps_to_wrist_ratio",
+        "age_group",
+        "deuremberg_bodyfat",
+        "deuremberg_mod_bodyfat",
+        "gallagher_bodyfat",
+        "jackson_pollock_bodyfat",
+        "navy_bodyfat"
+    ],
+    "categorical_features": [],
+    "best_model_name": "xgboost",
+    "cv_metrics": {
+        "mae": 3.9658279058352037,
+        "rmse": 4.908885638767145,
+        "r2": 0.6797853657434707,
+        "medae": 3.4375164031982415
+    },
+    "test_metrics": {
+        "mae": 3.351267915613511,
+        "rmse": 3.966960977370942,
+        "r2": 0.6617060981874736,
+        "medae": 2.825256729125975
+    }
+}
