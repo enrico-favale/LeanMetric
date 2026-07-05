@@ -55,3 +55,24 @@ def load_data(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path)
     
     return df
+
+
+def save_dataframe(df: pd.DataFrame, output_path: Path) -> None:
+    """
+    Save dataframe to CSV file.
+
+    Parameters
+    ----------
+    - df : pd.DataFrame, required
+        Dataframe to save
+    - output_path : Path, required
+        Output CSV path
+
+    Returns
+    -------
+    - None : None
+        The dataframe is saved to disk
+    """
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(output_path, index=False)
