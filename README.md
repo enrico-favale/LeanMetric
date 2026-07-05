@@ -1,7 +1,5 @@
 # LeanMetric: Body Fat Prediction
 
-LeanMetric is a machine learning project for estimating body fat percentage from anthropometric measurements. The pipeline starts from the original BodyFat dataset, applies preprocessing and feature engineering, compares multiple regression models, tunes the best candidates, and exposes a lightweight prediction interface for new raw samples.
-
 LeanMetric is a machine learning project for estimating body fat percentage from anthropometric measurements. The pipeline starts from the Body Fat Prediction Dataset available on Kaggle, applies preprocessing and feature engineering, compares multiple regression models, tunes the best candidates, and exposes a lightweight prediction interface for new raw samples. The dataset reference is: [Body Fat Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/body-fat-prediction-dataset/data).
 
 ## Project goals
@@ -23,23 +21,56 @@ The dataset has no missing values and no duplicated rows. The project assumes ma
 │   │   └── processed.csv
 │   └── raw
 │       └── bodyfat.csv
+├── environment.yml
 ├── models
+│   ├── best_model
+│   │   ├── best_model.joblib
+│   │   ├── best_model_metadata.json
+│   │   └── training_results.csv
+│   ├── best_model_drop
+│   │   ├── best_model.joblib
+│   │   ├── best_model_metadata.json
+│   │   └── training_results.csv
+│   ├── best_tuned_model
+│   │   ├── best_random_forest.joblib
+│   │   ├── best_random_forest_metadata.json
+│   │   ├── best_tuned_model.joblib
+│   │   ├── best_tuned_model_metadata.json
+│   │   ├── best_xgboost.joblib
+│   │   ├── best_xgboost_metadata.json
+│   │   ├── permutation_importance.csv
+│   │   └── tuning_results.csv
+│   └── best_tuned_model_top_features
+│       ├── best_random_forest.joblib
+│       ├── best_random_forest_metadata.json
+│       ├── best_tuned_model.joblib
+│       ├── best_tuned_model_metadata.json
+│       ├── best_xgboost.joblib
+│       ├── best_xgboost_metadata.json
+│       └── tuning_results.csv
 ├── notebooks
 │   ├── 01_eda_bodyfat.ipynb
 │   ├── 02_preprocessing.ipynb
-│   └── 03_train.ipynb
-├── src
-│   └── leanmetric
-│       ├── data
-│       │   ├── preprocessing.py
-│       │   └── feature_engineering.py
-│       └── models
-│           ├── evaluate.py
-│           ├── inspect.py
-│           ├── predict.py
-│           ├── registry.py
-│           ├── trainer.py
-│           └── tune.py
+│   ├── 03_train.ipynb
+│   └── 04_predict.ipynb
+├── README.md
+└── src
+    └── leanmetric
+        ├── data
+        │   ├── feature_engineering.py
+        │   ├── __init__.py
+        │   ├── load.py
+        │   ├── preprocessing.py
+        ├── __init__.py
+        ├── models
+        │   ├── evaluate.py
+        │   ├── __init__.py
+        │   ├── inspect.py
+        │   ├── predict.py
+        │   ├── registry.py
+        │   ├── trainer.py
+        │   ├── train.py
+        │   └── tune.py
 ```
 
 ## Preprocessing
@@ -183,3 +214,7 @@ The tuned folders include serialized models, metadata JSON files, and the CSV fi
 ## Notes
 
 The project is intentionally small and practical. Because the dataset is limited in size, the comparison focuses on regression models that are robust on tabular data rather than on heavy deep-learning architectures. A neural network was considered during experimentation, but the final production-oriented choice remains the pair of tuned tree-based models because they are easier to tune, easier to interpret, and stronger on this dataset.
+
+## License
+
+This project is distributed under the MIT License. You are free to use, modify, and redistribute it according to the terms of the license. See the `LICENSE` file for the full text.
