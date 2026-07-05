@@ -1,0 +1,16 @@
+name: leanmetric
+channels:
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - matplotlib
+  - python=3.11
+  - joblib
+  - scikit-learn
+  - ipykernel
+  - pyyaml
+  - pandas
+  - jupyterlab
+  - seaborn
+  - numpy
+prefix: /home/enrico/miniconda3/envs/leanmetric
